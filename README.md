@@ -17,6 +17,19 @@ This project demonstrates practical usage of:
 - GitHub Integration
 
 ---
+## Screenshots
+
+### Databricks Workspace
+
+![Workspace](docs/images/databricks-workspace.png)
+
+### Gold Quality Metrics
+
+![Metrics](docs/images/gold-quality-metrics.png)
+
+### Agent Response
+
+![Agent](docs/images/agent-response.png)
 
 ## Business Problem
 
