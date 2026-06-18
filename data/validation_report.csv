@@ -1,0 +1,14 @@
+table_name,column,rule,status,failed_count,total_records,failure_percentage,failed_rows
+customers,customer_id,not_null,PASSED,0,7,0.0,[]
+customers,customer_id,unique,FAILED,2,7,28.57,"[0, 1]"
+customers,name,not_null,FAILED,3,7,42.86,"[1, 2, 5]"
+customers,email,not_null,PASSED,0,7,0.0,[]
+customers,email,regex,FAILED,3,7,42.86,"[1, 2, 5]"
+customers,age,not_null,FAILED,1,7,14.29,[3]
+customers,age,min,PASSED,0,7,0.0,[]
+customers,age,max,FAILED,1,7,14.29,[4]
+customers,country,not_null,FAILED,1,7,14.29,[4]
+customers,country,accepted_values,FAILED,1,7,14.29,[6]
+products,product_id,not_null,PASSED,0,3,0.0,[]
+products,product_name,not_null,FAILED,1,3,33.33,[1]
+products,price,min,FAILED,1,3,33.33,[2]
