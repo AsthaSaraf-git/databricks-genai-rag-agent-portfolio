@@ -139,11 +139,43 @@ Business Response
 | RAG Documents | ✅ |
 | Agent Tools | ✅ |
 | Response Generator | ✅ |
+| Local Ollama LLM Integration | ✅ |
+| Databricks-generated Evidence File | ✅ |
+| LLM Executive Analysis Output | ✅ |
+| Full Autonomous Tool Calling | Planned |
 | Vector Search | Planned |
 | Foundation Models | Planned |
 | Agent Serving | Planned |
 
 ---
+## Local LLM Integration
+
+Since Databricks Foundation Model inference was unavailable in the Free Edition workspace, the project uses a local LLM integration with Ollama.
+
+The Databricks layer generates evidence from Delta-backed agent tools.
+
+```text
+Databricks Notebook
+      |
+      v
+Question Router
+      |
+      v
+Delta-backed Agent Tools
+      |
+      v
+generated_agent_evidence.txt
+
+The local LLM layer then reads this evidence file.
+
+generated_agent_evidence.txt
+      |
+      v
+Ollama Local LLM
+      |
+      v
+quality_analysis_output.txt
+```
 
 ## Future Target Architecture
 

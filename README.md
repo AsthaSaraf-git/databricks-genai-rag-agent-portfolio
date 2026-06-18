@@ -71,9 +71,36 @@ Agent Tools
         |
         v
 AI Data Quality Assistant
-```
 
+## LLM Integration
+
+This project also includes a local LLM integration using Ollama.
+
+Databricks generates agent evidence from Delta-backed tools and saves it as a text file. A local Ollama model then reads the evidence and generates an executive-style data quality analysis.
+
+```text
+Databricks Delta Tables
+        |
+        v
+Agent Tool Evidence
+        |
+        v
+generated_agent_evidence.txt
+        |
+        v
+Local Ollama LLM
+        |
+        v
+quality_analysis_output.txt
+
+```
+Current local model:
+
+* llama3.2:3b
+
+This approach allows GenAI experimentation without paid API usage.
 ---
+
 
 ## Data Sources
 
@@ -112,6 +139,8 @@ Contains historical quality scores across multiple runs.
 | 04_agent_context | Create agent context |
 | 05_quality_agent_tools | Build agent tools |
 | 06_agent_response_generator | Generate business-friendly responses |
+| 10_generate_agent_evidence | Generates agent evidence file from       Databricks tools |
+| local_llm_quality_agent.py | Reads evidence and generates LLM analysis using Ollama |
 
 ---
 
@@ -129,6 +158,13 @@ Example response:
 ---
 
 ## Future Enhancements
+
+### Current Limitations
+
+- Databricks Foundation Model endpoint was unavailable in Free Edition due to rate limit.
+- Local Ollama model is used for LLM experimentation.
+- Current implementation uses agent-style tools, but not full autonomous tool calling yet.
+- Vector Search is planned but not implemented yet.
 
 ### GenAI
 

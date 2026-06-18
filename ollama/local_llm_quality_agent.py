@@ -27,6 +27,7 @@ Rules:
 - If rule-level evidence is missing, say that root cause is only a hypothesis.
 - Clearly separate facts from assumptions.
 - Do not make up numbers.
+- Do not suggest numeric thresholds unless provided in the evidence.
 """
 
 response = ollama.chat(
