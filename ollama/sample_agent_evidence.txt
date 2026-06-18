@@ -1,0 +1,14 @@
+Table: products
+Quality Score: 77.78
+Previous Quality Score: 90.00
+Quality Score Change: -12.22
+
+Failed Rules:
+- not_null
+- unique
+- accepted_values
+
+Agent Findings:
+- products table has the highest quality degradation
+- quality score dropped by 12.22 points
+- failed rules indicate missing values, duplicate records, and invalid domain values
