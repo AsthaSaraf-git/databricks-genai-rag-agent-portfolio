@@ -1,0 +1,18 @@
+
+Question:
+Which table quality degraded the most?
+
+Answer:
+The table with the highest quality degradation is `customers`.
+
+Trend Evidence:
+- Previous Quality Score: 88.0
+- Current Quality Score: 30.0
+- Quality Score Change: -58.0
+- Run Timestamp: 2026-06-17 09:00:00
+
+Recommended Actions:
+- Compare failed rules between previous and current runs.
+- Check new null, duplicate, schema, or accepted-value failures.
+- Review recent ingestion or transformation changes.
+- Add alerting when quality score drops beyond threshold.
