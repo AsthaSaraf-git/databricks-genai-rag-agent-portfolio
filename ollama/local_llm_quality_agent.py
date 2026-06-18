@@ -1,6 +1,6 @@
 import ollama
 
-with open("ollama/sample_agent_evidence.txt", "r") as f:
+with open("ollama/generated_agent_evidence.txt", "r") as f:
     tool_output = f.read()
 
 question = "Which table quality degraded the most and what is the likely business impact?"
@@ -22,8 +22,9 @@ Using only this evidence, provide:
 
 Rules:
 - Use only the supplied evidence.
+- Do not invent failed rules.
 - Do not invent percentages, revenue impact, customer impact, or quantified business impact.
-- If evidence is insufficient, explicitly state what additional data is required.
+- If rule-level evidence is missing, say that root cause is only a hypothesis.
 - Clearly separate facts from assumptions.
 - Do not make up numbers.
 """
